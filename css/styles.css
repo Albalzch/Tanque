@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 100px 400px 100px 300px 100px;
+    grid-template-rows: 100px 800px 100px;
+    grid-template-areas: 
+    "stwest leftspace stcenter stnorth steast"
+    "stwest leftspace stcenter rightspace steast"
+    "stwest stsouth stcenter rightspace steast";
+    height: 1000px;
+    width: 1000px;
+    background-color: aqua;
+
+}
+.image-container{
+    display: flex;
+    position: relative;
+    
+}
+.image-container:hover .tank-image{
+    display: block;
+}
+.tank-image{
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-0.25turn);
+
+}
+.main-container > img{
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+.main-container > div{
+    display: flex;
+}
+
+.vertical{
+    flex-direction: column;
+}
+.stwest{
+    grid-area: stwest;
+}
+.stcenter{
+    grid-area: stcenter;
+}
+.steast{
+    grid-area: steast;
+}
+.stnorth{
+    grid-area: stnorth;
+}
+.stsouth{
+    grid-area: stsouth;
+}
+.leftspace{
+    grid-area: leftspace;
+}
+.rightspace{
+    grid-area: rightspace;
+}
